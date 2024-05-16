@@ -1,0 +1,41 @@
+@use "@/styles/_variables" as var;
+@use "@/styles/_mixins";
+
+.card {
+  display: flex;
+  gap: 20px;
+
+  padding: 20px;
+
+  border-bottom: 1px solid var.$color-light;
+
+  @include mixins.mediaMobile() {
+    flex-direction: column;
+  }
+
+  &__image {
+    position: relative;
+    min-height: 100%;
+    min-width: 200px;
+
+    @include mixins.mediaMobile() {
+      min-height: 200px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin: 10px 0;
+
+    word-wrap: break-word;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__info {
+    margin-bottom: 10px;
+  }
+}

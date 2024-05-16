@@ -1,0 +1,21 @@
+@use "@/styles/_variables" as var;
+@use "@/styles/_mixins.scss";
+
+.pagination {
+  @include mixins.paginationBlock();
+}
+
+.episodeList {
+  &__cardWrapper {
+    border-bottom: 1px solid transparent;
+
+    transition: border-bottom 0.3s ease, background-color 0.3s ease;
+
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-color: var.$color-light-40;
+      background-color: var.$color-light-20;
+    }
+  }
+}

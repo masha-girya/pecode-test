@@ -1,0 +1,6 @@
+@use "@/styles/_mixins.scss";
+@use "@/styles/_variables.scss" as var;
+
+.pagination {
+  @include mixins.paginationBlock();
+}

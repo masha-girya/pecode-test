@@ -1,0 +1,24 @@
+@use "@/styles/_variables" as var;
+
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+    padding: 5px 3px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+
+    cursor: pointer;
+
+    &:hover,
+    &_active {
+      border-color: var.$color-light;
+    }
+  }
+}

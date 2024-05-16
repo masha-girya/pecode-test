@@ -1,0 +1,44 @@
+@use "@/styles/_variables" as var;
+@use "@/styles/_mixins";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px 0;
+
+  border-top: 1px solid var.$color-light;
+
+  @include mixins.mediaMobile() {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__col {
+    &__title {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    &__tech {
+      display: flex;
+      gap: 40px;
+    }
+
+    &__info {
+      font-size: 14px;
+      padding-bottom: 3px;
+      margin-bottom: 3px;
+    }
+
+    a {
+      border-bottom: 1px solid var.$color-light-20;
+      transition: border-bottom-color 1s ease;
+
+      &:hover {
+        border-bottom-color: var.$color-light;
+      }
+    }
+  }
+}

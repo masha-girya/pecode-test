@@ -1,0 +1,20 @@
+@use '@/styles/_variables.scss' as var;
+
+.header {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  right: 50%;
+
+  height: var.$header-height;
+  width: 100%;
+
+  padding: 30px;
+
+  border-bottom: 1px solid var.$color-light-20;
+
+  background-color: var.$color-dark;
+
+  transform: translateX(-50%);
+}

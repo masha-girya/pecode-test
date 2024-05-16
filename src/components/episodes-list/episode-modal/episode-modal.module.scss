@@ -1,0 +1,37 @@
+@use "@/styles/_variables" as var;
+
+.episode {
+  height: 500px;
+
+  & * {
+    color: var.$color-dark;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin: 20px 0;
+  }
+
+  &__info {
+    margin-bottom: 10px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__characters {
+    h6 {
+      margin: 20px 0 10px;
+
+      font-size: 18px;
+
+      text-align: center;
+    }
+  }
+}

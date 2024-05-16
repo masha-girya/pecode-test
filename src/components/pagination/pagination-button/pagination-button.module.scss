@@ -1,0 +1,84 @@
+@use "@/styles/_variables" as var;
+
+.pagination {
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-bottom: 1px solid var.$color-light-20;
+
+  transition: border 0.3s ease-in-out;
+
+  cursor: pointer;
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #b0b0b0;
+
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+
+    &_active {
+      color: #272727;
+    }
+  }
+
+  svg path {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &_active,
+  &:hover {
+    border-bottom-color: var.$color-light-40;
+
+    p {
+      color: var.$color-light;
+    }
+
+    svg path {
+      fill: var.$color-light;
+    }
+  }
+
+  &--empty {
+    &:hover {
+      p {
+        color: var.$color-light;
+      }
+    }
+  }
+
+  &--prev,
+  &--next {
+    border-bottom: none;
+
+    &_nonClickable {
+      cursor: default;
+
+      &:hover {
+        p {
+          color: #b0b0b0;
+        }
+
+        svg path {
+          fill: #b0b0b0;
+        }
+      }
+    }
+  }
+
+  &--number {
+    &_nonClickable {
+      cursor: default;
+    }
+  }
+}

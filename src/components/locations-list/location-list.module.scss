@@ -1,0 +1,8 @@
+@use "@/styles/_variables" as var;
+
+.locationListBox {
+  &__pagination {
+    width: max-content;
+    margin: 30px auto 50px;
+  }
+}
